@@ -1,3 +1,0 @@
-oandapyV20
-requests
-pytz
