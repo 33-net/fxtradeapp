@@ -39,7 +39,7 @@ jobs:
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: python-app
+          name: tradingfuncapp
           path: |
             release.zip
 
@@ -54,7 +54,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
-          name: python-app
+          name: tradingfuncapp
 
       - name: Unzip artifact for deployment
         run: unzip release.zip
