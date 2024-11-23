@@ -6,8 +6,8 @@ import oandapyV20.endpoints.orders as orders
 
 # OANDA API設定
 OANDA_API_URL = "https://api-fxpractice.oanda.com/v3"
-OANDA_API_TOKEN = "YOUR_OANDA_API_TOKEN"  # OANDA APIトークン
-OANDA_ACCOUNT_ID = "YOUR_ACCOUNT_ID"      # OANDAアカウントID
+OANDA_API_TOKEN = ${{ secrets.OANDA_API_TOKEN }} # OANDA APIトークン
+OANDA_ACCOUNT_ID = ${{ secrets.OANDA_ACCOUNT_ID }} # OANDAアカウントID
 
 client = oandapyV20.API(access_token=OANDA_API_TOKEN)
 
