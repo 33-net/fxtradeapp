@@ -1,11 +1,11 @@
 # fxtradeapp
 
-
+<pre>
 <repository-root>/
 │
-├── .github/                     # GitHub Actionsや設定ファイル (任意)
+├── .github/                     # GitHub Actionsや設定ファイル
 │   └── workflows/
-│       └── deploy.yaml          # CI/CD用のワークフロー (例)
+│       └── deploy.yaml          # CI/CD用のワークフロー
 │
 ├── MyFunctionApp/               # Functionアプリケーションのルートディレクトリ
 │   ├── __init__.py              # 必須: Functionのエントリポイント
@@ -22,3 +22,5 @@
 ├── .gitignore                   # Git管理しないファイルを指定
 ├── README.md                    # リポジトリの説明
 └── requirements.txt             # Python依存関係 (root level, optional)
+</repository-root>
+</pre>
