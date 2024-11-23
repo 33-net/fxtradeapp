@@ -5,9 +5,6 @@
 name: Build and deploy tradingfuncapp
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
 
 env:
