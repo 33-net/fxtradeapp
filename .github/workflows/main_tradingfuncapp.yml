@@ -33,17 +33,14 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # Optional: Add step to run tests here
-
-      - name: Zip artifact for deployment
-        run: zip -r release.zip
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
-          name: tradingfuncapp
+          name: python-app
           path: |
-            release.zip
+            .
+            !venv/
 
   deploy:
     runs-on: ubuntu-latest
@@ -56,10 +53,8 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
-          name: tradingfuncapp
-
-      - name: Unzip artifact for deployment
-        run: unzip release.zip
+          name: python-app
+          path: .
 
       - name: 'Deploy to Azure Functions'
         uses: Azure/functions-action@v1
